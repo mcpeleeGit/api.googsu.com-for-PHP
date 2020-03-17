@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Collapse, Container, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 import './NavMenu.css';
 
 export class NavMenu extends Component {
@@ -37,8 +38,15 @@ export class NavMenu extends Component {
                   <NavLink tag={Link} className="text-dark" to="/counter"><img src="/img/icon/counter.png" className="logo-menu" alt="Counter"/>Counter</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink tag={Link} className="text-dark" to="/fetch-data"><img src="/img/icon/fetchdata.png" className="logo-menu" alt="Fetch data"/>Fetch data</NavLink>
+                  <NavLink tag={Link} className="text-dark" to="/fetch-data"><img src="/img/icon/fetchdata.png" className="logo-menu" alt="Fetch data"/>Fetch data</NavLink>                  
                 </NavItem>
+                <NavDropdown title="▤Dropdown" id="nav-dropdown">
+                  <NavDropdown.Item eventKey="4.1">Action</NavDropdown.Item>
+                  <NavDropdown.Item eventKey="4.2">Another action</NavDropdown.Item>
+                  <NavDropdown.Item eventKey="4.3">Something else here</NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item eventKey="4.4">Separated link</NavDropdown.Item>
+                </NavDropdown>                
                 <NavItem>
                   <NavLink tag={Link} className="text-dark" to="/login"><img src="/img/icon/login.png" className="logo-menu" alt="Login"/>Login</NavLink>
                 </NavItem>                

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Spinner from 'react-bootstrap/Spinner';
 
 export class FetchData extends Component {
   static displayName = FetchData.name;
@@ -39,7 +40,11 @@ export class FetchData extends Component {
 
   render() {
     let contents = this.state.loading
-      ? <p><em>Loading...</em></p>
+      ? <p>
+        <Spinner animation="border" role="status">
+          <span className="sr-only">Loading...</span>
+        </Spinner>    
+      </p>
       : FetchData.renderForecastsTable(this.state.forecasts);
 
     return (
