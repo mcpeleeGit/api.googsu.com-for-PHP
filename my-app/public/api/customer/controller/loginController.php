@@ -3,7 +3,7 @@
 ?>
 <?php
     try{
-        $pdo = new PDO('mysql:host=localhost;dbname=mcpelee','mcpelee','mcse98go^^');
+        $pdo = new PDO('');
     }
     catch(PDOExcpetion $e){
         echo 'db connection fail';

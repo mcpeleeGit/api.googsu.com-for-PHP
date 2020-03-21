@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Alert from 'react-bootstrap/Alert';
 import '../Login.css';
 
 export class Login extends Component {
@@ -52,6 +53,18 @@ export class Login extends Component {
             <label htmlFor="inputPassword" className="sr-only">Password</label>
               <input type="password" id="inputPassword" className="form-control" placeholder="Password" required="required" name="password" onChange={this.handleChange}/>
           <button className="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+
+          <Alert key="1" variant="light">
+            Forgot password? 
+            <Alert.Link href="/member/PasswordReset"> Password Reset</Alert.Link>.
+            <br/>
+            New to Googsu? 
+            <Alert.Link href="/member/SignUp"> Sign Up</Alert.Link>.            
+          </Alert>    
+
+          <Alert key="1" variant="light">
+
+          </Alert>              
         </form>
       </div>
     );
