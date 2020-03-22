@@ -40,11 +40,11 @@ export class FetchData extends Component {
 
   render() {
     let contents = this.state.loading
-      ? <p>
+      ? <div>
         <Spinner animation="border" role="status">
           <span className="sr-only">Loading...</span>
         </Spinner>    
-      </p>
+      </div>
       : FetchData.renderForecastsTable(this.state.forecasts);
 
     return (

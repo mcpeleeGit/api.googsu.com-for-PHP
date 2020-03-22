@@ -59,12 +59,9 @@ export class Login extends Component {
             <Alert.Link href="/member/PasswordReset"> Password Reset</Alert.Link>.
             <br/>
             New to Googsu? 
-            <Alert.Link href="/member/SignUp"> Sign Up</Alert.Link>.            
+            <Alert.Link href="/signup"> Sign Up</Alert.Link>.            
           </Alert>    
-
-          <Alert key="1" variant="light">
-
-          </Alert>              
+            
         </form>
       </div>
     );

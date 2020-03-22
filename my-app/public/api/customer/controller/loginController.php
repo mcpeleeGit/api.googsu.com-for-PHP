@@ -1,9 +1,6 @@
 <?php
-    header('Content-Type: application/json; charset=UTF-8');
-?>
-<?php
     try{
-        $pdo = new PDO('');
+        $pdo = new PDO();
     }
     catch(PDOExcpetion $e){
         echo 'db connection fail';

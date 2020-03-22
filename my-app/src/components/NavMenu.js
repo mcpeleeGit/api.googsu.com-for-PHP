@@ -49,7 +49,7 @@ export class NavMenu extends Component {
                 </NavDropdown>                
                 <NavItem>
                   <NavLink tag={Link} className="text-dark" to="/login"><img src="/img/icon/login.png" className="logo-menu" alt="Login"/>Login</NavLink>
-                </NavItem>                
+                </NavItem>                                  
               </ul>
             </Collapse>
           </Container>
