@@ -40,12 +40,12 @@ export class NavMenu extends Component {
                 <NavItem>
                   <NavLink tag={Link} className="text-dark" to="/fetch-data"><img src="/img/icon/fetchdata.png" className="logo-menu" alt="Fetch data"/>Fetch data</NavLink>                  
                 </NavItem>
-                <NavDropdown title="▤Dropdown" id="nav-dropdown">
-                  <NavDropdown.Item eventKey="4.1">Action</NavDropdown.Item>
-                  <NavDropdown.Item eventKey="4.2">Another action</NavDropdown.Item>
-                  <NavDropdown.Item eventKey="4.3">Something else here</NavDropdown.Item>
+                <NavDropdown title="▤ReBoPAW" id="nav-dropdown">
+                  <NavDropdown.Item eventKey="4.1">What is ReBoPAW?</NavDropdown.Item>
+                  <NavDropdown.Item eventKey="4.2">Achitecture</NavDropdown.Item>
+                  <NavDropdown.Item eventKey="4.3">Tutorial</NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item eventKey="4.4">Separated link</NavDropdown.Item>
+                  <NavDropdown.Item eventKey="4.4">DownLoad</NavDropdown.Item>
                 </NavDropdown>                
                 <NavItem>
                   <NavLink tag={Link} className="text-dark" to="/login"><img src="/img/icon/login.png" className="logo-menu" alt="Login"/>Login</NavLink>

@@ -18,6 +18,7 @@ class Route {
         
         require('api/common/constant.php');
         require('api/common/service.php');
+        require('api/common/request.php');
         require('api/common/response.php');
 
         $url = preg_split('#/#', $reqUri);

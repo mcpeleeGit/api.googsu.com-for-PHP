@@ -1,38 +1,13 @@
 <?php
-    try{
-        $pdo = new PDO();
-    }
-    catch(PDOExcpetion $e){
-        echo 'db connection fail';
-        return;
-    }
+require('api/customer/service/LoginService.php');
+require('api/customer/dto/LoginRequestDTO.php');
 
-     $json = file_get_contents('php://input');
-     $data = json_decode($json);
-     
-    if(!isset($data->{'email'}) || !isset($data->{'password'})){
-        echo json_encode(array('result_code'=>200, 'result'=>'fail', 'message'=>'no param'));
-        return;
+class loginController {
+    public function defaultMethod(){
+        $LoginService = new LoginService(Constants::DB_CONN);
+        $LoginService->excuteLogin(new LoginRequestDTO());
     }
-
-
-    $email = $data->{'email'};
-    $password = $data->{'password'};
-
-    $sql = 'SELECT count(user_login) AS cnt FROM wp_users ' ;
-    
-    $result = $pdo->query($sql);
-    $cnt = 0;
-    while($row = $result->fetch()){
-        $cnt = $row['cnt']; 
-    }
-    if($cnt == 0){
-        echo json_encode(array('result_code'=>200, 'result'=>'fail', 'message'=>'no account'));
-    }
-    else{
-        echo json_encode(array('result_code'=>200, 'result'=>'success'));
-    }
-    
+}   
 ?>
 
 

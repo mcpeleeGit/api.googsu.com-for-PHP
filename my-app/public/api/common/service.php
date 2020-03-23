@@ -1,6 +1,5 @@
 <?php
 class service {  
-    protected $test = "test";
     protected $pdo;
     public function __construct($isDbCon = 'N')
     {
