@@ -1,10 +1,8 @@
 <?php
-class LoginDAO {
-    protected $pdo;
-
+class LoginDAO extends dao {  
     public function __construct($pdo)
     {
-        $this->pdo = $pdo;
+        parent::__construct($pdo);
     }
 
     public function validLogin($loginRequestVO){
@@ -17,12 +15,7 @@ class LoginDAO {
                  WHERE user_login= :email 
                    AND user_pass= :password
                 ';
-        $sth = ($this->pdo)->prepare($sql);
-        $sth->bindValue(':email', $loginRequestVO->email, PDO::PARAM_STR);
-        $sth->bindValue(':password', $loginRequestVO->password, PDO::PARAM_STR);
-        $sth->execute();     
-        $row = $sth->fetch();
-        return $row['result'];
+        return $this->getResult($sql, $loginRequestVO);
     }
 }   
 ?>

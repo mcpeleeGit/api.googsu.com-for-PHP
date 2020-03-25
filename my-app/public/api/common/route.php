@@ -15,9 +15,10 @@ class Route {
     }        
 
     private static function routeApi($reqUri){
-        
+        //one time include
         require('api/common/constant.php');
         require('api/common/service.php');
+        require('api/common/dao.php');
         require('api/common/request.php');
         require('api/common/response.php');
 
