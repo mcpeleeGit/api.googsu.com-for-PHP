@@ -45,7 +45,7 @@ export class NavMenu extends Component {
                   <NavDropdown.Item eventKey="4.2">Achitecture</NavDropdown.Item>
                   <NavDropdown.Item eventKey="4.3">Tutorial</NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item eventKey="4.4">DownLoad</NavDropdown.Item>
+                  <NavDropdown.Item eventKey="4.4" href="https://github.com/mcpeleeGit/onlyPHP" target="_blank">DownLoad</NavDropdown.Item>
                 </NavDropdown>                
                 <NavItem>
                   <NavLink tag={Link} className="text-dark" to="/login"><img src="/img/icon/login.png" className="logo-menu" alt="Login"/>Login</NavLink>
