@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Alert from 'react-bootstrap/Alert';
 import '../Login.css';
-
+import { default as User } from '../features/login/User';
 export class Login extends Component {
 
   constructor(props) {
@@ -18,8 +18,14 @@ export class Login extends Component {
         this.setState({ data: data, isLoading: false });
         console.log(data);
  
-        if(data.result === "success") this.props.history.push('/');
-        else alert(data.message);
+        if(data.result === "success") {
+          User.setUserLogin(true);
+          console.log(User.isLogin());          
+          this.props.history.push('/');
+        }
+        else {
+          alert(data.message);
+        }
       }) 
       .catch(error => this.setState({ error, isLoading: false }));
     e.preventDefault();

@@ -15,6 +15,10 @@ class LoginService extends service {
     public function excuteLogin($loginRequestDTO){
         $loginRequestVO = LoginTransformer::transform($loginRequestDTO, new LoginRequestVO());
         $result = ($this->loginDAO)->validLogin($loginRequestVO);
+        if($result) {
+            session_start();
+            $_SESSION['user_login'] = $loginRequestDTO->email;
+        }
         Response::jsonReturn($result, 'no account'); 
     }
 }

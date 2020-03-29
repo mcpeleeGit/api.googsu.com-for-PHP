@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-
+import { default as User } from '../features/login/User';
 export class Home extends Component {
   static displayName = Home.name;
-
+  constructor(props) {
+    super(props);
+  }
   render () {
     return (
       <div>
