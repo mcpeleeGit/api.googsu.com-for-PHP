@@ -19,7 +19,7 @@ export default class App extends Component {
 
   componentDidMount() {
     this.initializeUserInfo();
-}  
+  }  
 
   render () {
     const isLoginFetchData = User.isLogin() ? FetchData : Login;

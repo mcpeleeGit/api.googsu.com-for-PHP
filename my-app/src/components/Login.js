@@ -19,7 +19,7 @@ export class Login extends Component {
         console.log(data);
  
         if(data.result === "success") {
-          User.setUserLogin(true);
+          User.setUserLogin('true');
           console.log(User.isLogin());          
           this.props.history.push('/');
         }

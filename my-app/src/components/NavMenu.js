@@ -3,6 +3,7 @@ import { Collapse, Container, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLi
 import { Link } from 'react-router-dom';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import './NavMenu.css';
+import { default as User } from '../features/login/User';
 
 export class NavMenu extends Component {
   static displayName = NavMenu.name;
@@ -22,7 +23,30 @@ export class NavMenu extends Component {
     });
   }
 
+  bindClick(target){
+    if(target === 'LogOut') {
+      User.setUserLogin('false');
+      console.log(User.isLogin());     
+      window.location = "/";
+    }
+  }
+
   render () {
+    const Login = () => (
+      <NavItem>
+        <NavLink tag={Link} className="text-dark" to="/login"><img src="/img/icon/login.png" className="logo-menu" alt="Login"/>Login</NavLink>
+      </NavItem>    
+      )  
+    const LogOut = () => (
+      <NavDropdown title="Account" id="my-dropdown">
+        <NavDropdown.Item eventKey="4.1">What is ReBoPAW?</NavDropdown.Item>
+        <NavDropdown.Item eventKey="4.2">Achitecture</NavDropdown.Item>
+        <NavDropdown.Item eventKey="4.3">Tutorial</NavDropdown.Item>
+        <NavDropdown.Divider />
+        <NavDropdown.Item eventKey="4.4" onClick={this.bindClick.bind(this, 'LogOut')}>LogOut</NavDropdown.Item>
+      </NavDropdown>    
+      )        
+
     return (
       <header>
         <Navbar className="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-3" light>
@@ -47,9 +71,8 @@ export class NavMenu extends Component {
                   <NavDropdown.Divider />
                   <NavDropdown.Item eventKey="4.4" href="https://github.com/mcpeleeGit/onlyPHP" target="_blank">DownLoad</NavDropdown.Item>
                 </NavDropdown>                
-                <NavItem>
-                  <NavLink tag={Link} className="text-dark" to="/login"><img src="/img/icon/login.png" className="logo-menu" alt="Login"/>Login</NavLink>
-                </NavItem>                                  
+                {!User.isLogin() && <Login/> }
+                {User.isLogin() && <LogOut/> }
               </ul>
             </Collapse>
           </Container>

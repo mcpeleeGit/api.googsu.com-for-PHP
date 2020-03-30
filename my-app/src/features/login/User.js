@@ -6,7 +6,7 @@ class User {
       localStorage.setItem("isLogin", isLogin);
     };
     isLogin() {
-      return localStorage.getItem("isLogin") ? true : false;
+      return (localStorage.getItem("isLogin") === 'true') ? true : false;
     }
   }
   export default new User();
