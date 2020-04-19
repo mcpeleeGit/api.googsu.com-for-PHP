@@ -19,7 +19,8 @@
     "react-scripts": "^3.0.1",
     "reactstrap": "^6.3.0",
     "redux": "^4.0.5",
-    "rimraf": "^2.6.2"
+    "rimraf": "^2.6.2",
+    "terser": "^4.6.11"
   },
   "devDependencies": {
     "ajv": "^6.9.1",
@@ -43,7 +44,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint ./src/"
   },
-  "proxy": "http://localhost",
+  "proxy": "https://googsu.com",
   "browserslist": {
     "production": [
       ">0.2%",
@@ -55,5 +56,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "keywords": []
 }
