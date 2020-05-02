@@ -41,7 +41,7 @@ export class NavMenu extends Component {
       <NavDropdown title="Account" id="my-dropdown">
         <NavDropdown.Item eventKey="4.1">What is ReBoPAW?</NavDropdown.Item>
         <NavDropdown.Item eventKey="4.2">Achitecture</NavDropdown.Item>
-        <NavDropdown.Item eventKey="4.3" href="/board">Board</NavDropdown.Item>
+        <NavDropdown.Item eventKey="4.3" href="/board-list">Board</NavDropdown.Item>
         <NavDropdown.Divider />
         <NavDropdown.Item eventKey="4.4" onClick={this.bindClick.bind(this, 'LogOut')}>LogOut</NavDropdown.Item>
       </NavDropdown>    

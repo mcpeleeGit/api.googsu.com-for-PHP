@@ -6,7 +6,10 @@ import { FetchData } from './components/FetchData';
 import { Counter } from './components/Counter';
 import { Login } from './components/Login';
 import { SignUp } from './components/SignUp';
-import { Board } from './components/Board/BoardList';
+import { BoardList } from './components/Board/BoardList';
+import { BoardRead } from './components/Board/BoardRead';
+import { BoardWrite } from './components/Board/BoardWrite';
+import { BoardUpdate } from './components/Board/BoardUpdate';
 import { ReduxCounter } from './features/counter/Counter';
 import './custom.css'
 import { default as User } from './features/login/User';
@@ -32,7 +35,10 @@ export default class App extends Component {
         <Route path='/fetch-data' component={isLoginFetchData} />
         <Route path='/login' component={Login} />
         <Route path='/signup' component={SignUp} />
-        <Route path='/board' component={Board} />
+        <Route path='/board-list' component={BoardList} />
+        <Route path='/board-read' component={BoardRead} />
+        <Route path='/board-write' component={BoardWrite} />
+        <Route path='/board-update' component={BoardUpdate} />
         <ReduxCounter />
       </Layout>
     );
