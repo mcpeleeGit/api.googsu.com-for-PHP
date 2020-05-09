@@ -66,8 +66,8 @@ export class NavMenu extends Component {
                 </NavItem>
                 <NavDropdown title="▤ReBoPAW" id="nav-dropdown">
                   <NavDropdown.Item eventKey="4.1" href="/what-is-rebopaw">What is ReBoPAW?</NavDropdown.Item>
-                  <NavDropdown.Item eventKey="4.2">Achitecture</NavDropdown.Item>
-                  <NavDropdown.Item eventKey="4.3">Tutorial</NavDropdown.Item>
+                  <NavDropdown.Item eventKey="4.2" href="/achitecture">Achitecture</NavDropdown.Item>
+                  <NavDropdown.Item eventKey="4.3" href="/tutorial">Tutorial</NavDropdown.Item>
                   <NavDropdown.Divider />
                   <NavDropdown.Item eventKey="4.4" href="https://github.com/mcpeleeGit/onlyPHP" target="_blank">DownLoad</NavDropdown.Item>
                 </NavDropdown>                

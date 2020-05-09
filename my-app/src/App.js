@@ -13,6 +13,8 @@ import { BoardWrite } from './components/Board/BoardWrite';
 import { BoardUpdate } from './components/Board/BoardUpdate';
 
 import { WhatIs } from './components/ReBoPAW/WhatIs';
+import { Tutorial } from './components/ReBoPAW/Tutorial';
+import { Achitecture } from './components/ReBoPAW/Achitecture';
 
 import { ReduxCounter } from './features/counter/Counter';
 import './custom.css'
@@ -46,6 +48,8 @@ export default class App extends Component {
         <Route path='/board-update' component={BoardUpdate} />
 
         <Route path='/what-is-rebopaw' component={WhatIs} />
+        <Route path='/tutorial' component={Tutorial} />
+        <Route path='/achitecture' component={Achitecture} />
 
         <ReduxCounter />
       </Layout>
