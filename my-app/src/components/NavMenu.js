@@ -65,7 +65,7 @@ export class NavMenu extends Component {
                   <NavLink tag={Link} className="text-dark" to="/fetch-data"><img src="/img/icon/fetchdata.png" className="logo-menu" alt="Fetch data"/>Fetch data</NavLink>                  
                 </NavItem>
                 <NavDropdown title="▤ReBoPAW" id="nav-dropdown">
-                  <NavDropdown.Item eventKey="4.1">What is ReBoPAW?</NavDropdown.Item>
+                  <NavDropdown.Item eventKey="4.1" href="/what-is-rebopaw">What is ReBoPAW?</NavDropdown.Item>
                   <NavDropdown.Item eventKey="4.2">Achitecture</NavDropdown.Item>
                   <NavDropdown.Item eventKey="4.3">Tutorial</NavDropdown.Item>
                   <NavDropdown.Divider />
