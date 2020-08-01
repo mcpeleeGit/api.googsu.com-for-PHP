@@ -16,7 +16,6 @@ import { WhatIs } from './components/ReBoPAW/WhatIs';
 import { Tutorial } from './components/ReBoPAW/Tutorial';
 import { Achitecture } from './components/ReBoPAW/Achitecture';
 
-import { ReduxCounter } from './features/counter/Counter';
 import './custom.css'
 import { default as User } from './features/login/User';
 
@@ -24,7 +23,7 @@ export default class App extends Component {
   static displayName = App.name;
 
   initializeUserInfo = async () => {
-    console.log("test"); //PHP 세션에서 로그인 여부와 프로필 가져오기
+    //console.log("test"); //PHP 세션에서 로그인 여부와 프로필 가져오기
   }  
 
   componentDidMount() {
@@ -51,7 +50,6 @@ export default class App extends Component {
         <Route path='/tutorial' component={Tutorial} />
         <Route path='/achitecture' component={Achitecture} />
 
-        <ReduxCounter />
       </Layout>
     );
   }
