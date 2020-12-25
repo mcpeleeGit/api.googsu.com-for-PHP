@@ -5,14 +5,13 @@ export class WhatIs extends Component {
     render() {
         return (
             <div>
-            <h1>What is ReBoPAW?</h1>
-            <p>ReBoPAW = React + React BootStrap + PHP API + WordPress </p>
+            <h1>What is ReBoPA?</h1>
+            <p>ReBoPAW = React + React BootStrap + PHP API MVC </p>
             <img src="/img/whatisrebopaw.jpg" alt="home" className="w-100 p-3"/>
             <ul>
               <li><a href="https://reactjs.org/">React</a> A JavaScript library for building user interfaces</li>
               <li><a href='https://react-bootstrap.github.io/'>React BootStrap</a> The most popular front-end framework. Rebuilt for React</li>
               <li><a href='https://www.php.net/'>PHP API</a> is a popular general-purpose scripting language that is especially suited to web. In addition, we have formed a RESTful API architecture that can operate DDD and MVC.</li>
-              <li><a href='https://wordpress.com/read'>WordPress</a> Word Press is a great solution. However, many plug-ins become too slow to use. I refer to Word Press and offer a closed but customizable solution that works light and fast.</li>
             </ul>
             <p>Making this is just a personal hobby. I am planning to build it little by little with the following plan.:</p>
             <ul>

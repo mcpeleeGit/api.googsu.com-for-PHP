@@ -5,6 +5,8 @@ import { Home } from './components/Home';
 import { FetchData } from './components/FetchData';
 import { Counter } from './components/Counter';
 import { Login } from './components/Login';
+import { LoginCallBack } from './components/LoginCallBack';
+
 import { SignUp } from './components/SignUp';
 
 import { PrivacyPolicy } from './components/Contents/PrivacyPolicy';
@@ -45,6 +47,8 @@ export default class App extends Component {
         <Route path='/counter' component={Counter} />
         <Route path='/fetch-data' component={isLoginFetchData} />
         <Route path='/login' component={Login} />
+        <Route path='/loginCallBack' component={LoginCallBack} />
+        
         <Route path='/signup' component={SignUp} />
 
         <Route path='/privacyPolicy' component={PrivacyPolicy} />

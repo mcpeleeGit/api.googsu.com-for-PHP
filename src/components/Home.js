@@ -1,27 +1,91 @@
 import React, { Component } from 'react';
-
+import Card from 'react-bootstrap/Card';
+import CardDeck from 'react-bootstrap/CardDeck';
 export class Home extends Component {
-  static displayName = Home.name;
+    static displayName = Home.name;
 
-  render () {
-    return (
-      <div>
-        <h1>Hello, world!</h1>
-        <p>Welcome to my new single-page application, built with:</p>
-        <img src="/img/home.jpg" alt="home" className="w-100 p-3"/>
-        <ul>
-          <li><a href="https://www.php.net/">PHP</a> Custom RESTful API</li>
-          <li><a href='https://facebook.github.io/react/'>React</a> for client-side code</li>
-          <li><a href='https://getbootstrap.com/'>Bootstrap</a> for layout and styling</li>
-        </ul>
-        <p>I will add the application with emphasis on the following contents:</p>
-        <ul>
-          <li><strong>Client-side navigation</strong>. For example, click <em>Counter</em> then <em>Back</em> to return here.</li>
-          <li><strong>PHP RESTful API</strong>. The PHP development environment based on Linux can be deployed at the lowest cost. The goal of the <code>PHP RESTful API</code> is to make it possible to replace it with another system at any time with standard interfaces and access controls.</li>
-          <li><strong>Efficient production builds</strong>. In production mode, development-time features are disabled, and your <code>dotnet publish</code> configuration produces minified, efficiently bundled JavaScript files.</li>
-        </ul>
-        <p>The <code>ClientApp</code> subdirectory is a standard React application based on the <code>create-react-app</code> template. If you open a command prompt in that directory, you can run <code>npm</code> commands such as <code>npm test</code> or <code>npm install</code>.</p>
-      </div>
-    );
-  }
+    render() {
+        return (
+            <div>
+                <h1>Hello, world!</h1>
+                <p>Welcome to my tutorial web site:</p>
+                <img src="/img/home.jpg" alt="home" className="w-75 p-3" />
+                <CardDeck>
+                    <Card>
+                        <Card.Body>
+                            <Card.Title><Card.Img variant="top" src="/img/home/kakaosync.png" /></Card.Title>
+                            <Card.Text>
+                                카카오 로그인만으로 간단히 가입하는 기능 예제.<br />
+                            </Card.Text>
+                        </Card.Body>
+                        <Card.Footer>
+                            <a href="/login">[Tutorial]</a>
+                        </Card.Footer>
+                    </Card>
+                    <Card>
+                        <Card.Img variant="top" src="/img/char11.jpg" />
+                        <Card.Body>
+                            <Card.Title>Kakao API PHP Simple Pack</Card.Title>
+                            <Card.Text>
+                                카카오 REST API의 손쉬운 사용을 위한 PHP 클래스.
+                            </Card.Text>
+                        </Card.Body>
+                        <Card.Footer>
+                            <a href="http://test-tam.pe.kr/PHPSimplePack.php">[Example]</a>
+                        </Card.Footer>
+                    </Card>
+                    <Card>
+                        <Card.Img variant="top" src="/img/char21.jpg" />
+                        <Card.Body>
+                            <Card.Title>ReBoPA</Card.Title>
+                            <Card.Text>
+                                PHP를 이용한 REST API 라우팅 아키텍쳐와 React간의 MVC아키텍쳐
+                            </Card.Text>
+                        </Card.Body>
+                        <Card.Footer>
+                        <a href="https://github.com/mcpeleeGit/web.googsu.com_react_raw">[GitHub]</a>
+                        </Card.Footer>
+                    </Card>
+                </CardDeck>
+                <CardDeck>
+                    <Card>
+                        <Card.Img variant="top" src="/img/char12.jpg" />
+                        <Card.Body>
+                            <Card.Title>kakao login - ASP.NET (framework 4.5) MVC5</Card.Title>
+                            <Card.Text>
+                                OWIN, Katana OAuth2를 이용한 카카오 로그인 라이브러리
+                            </Card.Text>
+                        </Card.Body>
+                        <Card.Footer>
+                            <a href="https://www.nuget.org/packages/Mcpelee.Owin.Security.Kakao/">[MicroSoft Nuget]</a>
+                        </Card.Footer>
+                    </Card>
+                    <Card>
+                        <Card.Img variant="top" src="/img/char22.jpg" />
+                        <Card.Body>
+                            <Card.Title></Card.Title>
+                            <Card.Text>
+                                
+                            </Card.Text>
+                        </Card.Body>
+                        <Card.Footer>
+                            
+                        </Card.Footer>
+                    </Card>
+                    <Card>
+                        <Card.Img variant="top" src="/img/char23.jpg" />
+                        <Card.Body>
+                            <Card.Title></Card.Title>
+                            <Card.Text>
+                            
+              </Card.Text>
+                        </Card.Body>
+                        <Card.Footer>
+                            
+                        </Card.Footer>
+                    </Card>
+                </CardDeck>
+            </div>
+        );
+    }
 }
