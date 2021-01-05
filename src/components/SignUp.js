@@ -4,8 +4,8 @@ import Form from 'react-bootstrap/Form'
 export class SignUp extends Component {
   static displayName = SignUp.name;
 
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = { email:'', password:'', passwordConfirm:'', data:[], isLoading: true };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -69,7 +69,6 @@ export class SignUp extends Component {
             <hr/>
             <Form.Group controlId="exampleForm.ControlTextarea1">   
               <Form.Check
-                required
                 name="terms"
                 label="동의합니다."
                 //onChange={handleChange}
@@ -182,13 +181,12 @@ export class SignUp extends Component {
             <hr/>
             <Form.Group controlId="exampleForm.ControlTextarea2">   
               <Form.Check
-                required
                 name="terms"
                 label="동의합니다."
                 //onChange={handleChange}
                 //isInvalid={!!errors.terms}
                 //feedback={errors.terms}
-                id="validationFormik106"
+                id="validationFormik107"
                 required="required"
                 feedbackTooltip
               />         
@@ -196,13 +194,12 @@ export class SignUp extends Component {
             <hr/>
             <Form.Group controlId="exampleForm.ControlTextarea3">   
               <Form.Check
-                required
                 name="terms"
                 label="만 14세 이상입니다."
                 //onChange={handleChange}
                 //isInvalid={!!errors.terms}
                 //feedback={errors.terms}
-                id="validationFormik106"
+                id="validationFormik108"
                 required="required"
                 feedbackTooltip
               />         

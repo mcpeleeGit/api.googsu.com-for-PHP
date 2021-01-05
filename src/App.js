@@ -39,12 +39,13 @@ export default class App extends Component {
   }  
 
   render () {
-    const isLoginFetchData = User.isLogin() ? FetchData : Login;
+    const isLoginFetchData = User.isLogin() ? FetchData : FetchData;
+    const isLoginCounter = User.isLogin() ? Counter : Login;
     
     return (
       <Layout>
         <Route exact path='/' component={Home} />
-        <Route path='/counter' component={Counter} />
+        <Route path='/counter' component={isLoginCounter} />
         <Route path='/fetch-data' component={isLoginFetchData} />
         <Route path='/login' component={Login} />
         <Route path='/loginCallBack' component={LoginCallBack} />

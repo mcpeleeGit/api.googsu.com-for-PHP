@@ -55,6 +55,7 @@ export class Login extends Component {
         <form className="form-signin" onSubmit={this.handleSubmit}>
           <h1 className="h3 mb-3 font-weight-normal">SNS Account sign in</h1>
           <a href={this.state.kakaologinLink}><img src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg" width="222" alt="Kakao Login" /></a>
+          <p/>
           <img className="mb-8 sns-icon" src="/img/snsicon/naver.PNG" alt="Log in with NAVER" />
           <img className="mb-8 sns-icon" src="/img/snsicon/instagram.png" alt="Log in with Instagram" onClick={this.bindClick.bind(this, 'instagram')} />
           <img className="mb-8 sns-icon" src="/img/snsicon/facebook.png" alt="Log in with FaceBook" />
