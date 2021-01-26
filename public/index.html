@@ -1,17 +1,18 @@
 ﻿<!DOCTYPE html>
 <html lang="kr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#000000">
-    <base href="%PUBLIC_URL%/" />
-    <!--
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <base href="%PUBLIC_URL%/" />
+  <!--
       manifest.json provides metadata used when your web app is added to the
       homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-    <!--
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+  <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -20,17 +21,15 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>Googsu WebApplication1</title>
-    <script src="//developers.kakao.com/sdk/js/kakao.js"></script>
-    <script src="//googsu.com/kakaoJavaScriptAPIwrapper.js"></script>
+  <title>Googsu WebApplication1</title>
+</head>
 
-  </head>
-  <body>
-    <noscript>
-      You need to enable JavaScript to run this app.
-    </noscript>
-    <div id="root"></div>
-    <!--
+<body>
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+  <div id="root"></div>
+  <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
@@ -40,5 +39,40 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  </body>
+
+  <table>
+    <tr>
+      <td>
+        <!-- KB에스크로 이체 인증마크 적용 시작 -->
+        <script>
+          function onPopKBAuthMark() {
+            window.open('', 'KB_AUTHMARK', 'height=604, width=648, status=yes, toolbar=no, menubar=no, location = no');
+            document.KB_AUTHMARK_FORM.action = 'http://escrow1.kbstar.com/quics';
+            document.KB_AUTHMARK_FORM.target = 'KB_AUTHMARK';
+            document.KB_AUTHMARK_FORM.submit();
+          }
+        </script>
+        <form name="KB_AUTHMARK_FORM" method="get">
+          <input type="hidden" name="page" value="B009111" />
+          <input type="hidden" name="cc" value="b010807:b008491" />
+          <input type="hidden" name="mHValue" value='d3f9f9162ea87eebd3499555d201488b' />
+        </form>
+        <a href="#" onclick="javascript:onPopKBAuthMark();return false;">
+          <img src="https://img1.kbstar.com/img/escrow/escrowcmark.gif" border="0" />
+        </a>
+        <!-- KB에스크로 이체 인증마크 적용 종료 -->
+      </td>
+      <td>
+        <!--KISA Certificate Mark-->
+        <a
+          href='javascript:window.open("https://www.ucert.co.kr/trustlogo/sseal_cert.html?sealnum=86b53ab6136a89a9&sealid=62aad1b205fc11c0a2fb3a8c44a4cf43","mark","scrollbars=no,resizable=no,width=565,height=780");'><img
+            src="https://www.ucert.co.kr/images/trustlogo/s_kisa.gif" width="65" height="63" align="absmiddle"
+            border="0" style="cursor:hand"></a>
+        <!--KISA Certificate Mark-->
+      </td>
+    </tr>
+  </table>
+
+</body>
+
 </html>

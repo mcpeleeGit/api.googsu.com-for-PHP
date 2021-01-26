@@ -44,7 +44,7 @@ class KakaoAPIService extends KakaoService
     {
         $callUrl = "https://kapi.kakao.com/v2/user/me";
         $headers[] = "Authorization: Bearer " . $_SESSION["accessToken"];
-        return $this->excuteCurl($callUrl, "POST", $headers, array(), "profile");;
+        return $this->excuteCurl($callUrl, "POST", $headers,  array(), "profile");;
     }    
 
     public function setLogOut()
